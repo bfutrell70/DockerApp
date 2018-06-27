@@ -1,9 +1,9 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709 AS base
+FROM microsoft/dotnet:2.1-aspnetcore-runtime-1709 AS base
 WORKDIR /app
 EXPOSE 50393
 EXPOSE 44387
 
-FROM microsoft/dotnet:2.1-sdk-nanoserver-1709  AS build
+FROM microsoft/dotnet:2.1-sdk-1709  AS build
 WORKDIR /src
 COPY DockerApp/DockerApp.csproj DockerApp/
 RUN dotnet restore DockerApp/DockerApp.csproj
