@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 50393
 EXPOSE 44387
 
-FROM microsoft/dotnet:2.1-2.1-sdk-bionic AS build
+FROM microsoft/dotnet:2.1-sdk-bionic AS build
 WORKDIR /src
 COPY DockerApp/DockerApp.csproj DockerApp/
 RUN dotnet restore DockerApp/DockerApp.csproj
